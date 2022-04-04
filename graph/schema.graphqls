@@ -25,4 +25,6 @@ input NewTodo {
 
 type Mutation {
   createTodo(input: NewTodo!): Todo!
+  finishTodo(todoId: ID!): Todo!
+  deleteTodo(todoId: ID!): Todo!
 }
