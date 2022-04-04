@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/N-Iwata/gqlgen-todos/graph"
+	"github.com/N-Iwata/gqlgen-todos/graph/generated"
 	"github.com/N-Iwata/gqlgen-todos/graph/model"
 )
 
@@ -62,6 +62,6 @@ func (r *mutationResolver) CreateUser(ctx context.Context, input model.NewUser) 
 }
 
 // Mutation returns generated.MutationResolver implementation.
-func (r *Resolver) Mutation() graph.MutationResolver { return &mutationResolver{r} }
+func (r *Resolver) Mutation() generated.MutationResolver { return &mutationResolver{r} }
 
 type mutationResolver struct{ *Resolver }
