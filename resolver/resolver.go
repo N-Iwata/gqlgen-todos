@@ -1,5 +1,7 @@
 package resolver
 
+//go:generate go run github.com/99designs/gqlgen generate
+
 import (
 	"github.com/N-Iwata/gqlgen-todos/graph/model"
 )
