@@ -1,8 +1,8 @@
-package graph
+package resolver
 
-//go:generate go run github.com/99designs/gqlgen generate
-
-import "github.com/N-Iwata/gqlgen-todos/graph/model"
+import (
+	"github.com/N-Iwata/gqlgen-todos/graph/model"
+)
 
 // This file will not be regenerated automatically.
 //
@@ -10,4 +10,5 @@ import "github.com/N-Iwata/gqlgen-todos/graph/model"
 
 type Resolver struct {
 	todos []*model.Todo
+	users []*model.User
 }

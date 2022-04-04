@@ -1,0 +1,15 @@
+type Mutation {
+  createTodo(input: NewTodo!): Todo!
+  finishTodo(todoId: ID!): Todo!
+  deleteTodo(todoId: ID!): Todo!
+  createUser(input: NewUser!): User!
+}
+
+input NewTodo {
+  text: String!
+  userId: String!
+}
+
+input NewUser {
+  name: String!
+}
